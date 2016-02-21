@@ -17,7 +17,8 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -41,16 +42,26 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
-        // Verify the contents of the list by printing out each element to the logs
-        Log.v("NumbersActivity", "Word at index 0: " + words.get(0));
-        Log.v("NumbersActivity", "Word at index 1: " + words.get(1));
-        Log.v("NumbersActivity", "Word at index 2: " + words.get(2));
-        Log.v("NumbersActivity", "Word at index 3: " + words.get(3));
-        Log.v("NumbersActivity", "Word at index 4: " + words.get(4));
-        Log.v("NumbersActivity", "Word at index 5: " + words.get(5));
-        Log.v("NumbersActivity", "Word at index 6: " + words.get(6));
-        Log.v("NumbersActivity", "Word at index 7: " + words.get(7));
-        Log.v("NumbersActivity", "Word at index 8: " + words.get(8));
-        Log.v("NumbersActivity", "Word at index 9: " + words.get(9));
+        // Find the root view so we can add child views to it
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+
+        // Create a variable to keep track of the current index position
+        int index = 0;
+
+        // Keep looping until we've reached the end of the list (which means keep looping
+        // as long as the current index position is less than the length of the list)
+        while (index < words.size()) {
+            // Create a new TextView
+            TextView wordView = new TextView(this);
+
+            // Set the text to be word at the current index
+            wordView.setText(words.get(index));
+
+            // Add this TextView as another child to the root view of this layout
+            rootView.addView(wordView);
+
+            // Increment the index variable by 1
+            index++;
+        }
     }
 }
