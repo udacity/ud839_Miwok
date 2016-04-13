@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- Miwok translation for color red -->
+    <string name="miwok_color_red">weṭeṭṭi</string>
+
+    <!-- Miwok translation for color dusty yellow -->
+    <string name="miwok_color_dusty_yellow">ṭopiisә</string>
+
+    <!-- Miwok translation for color mustard yellow -->
+    <string name="miwok_color_mustard_yellow">chiwiiṭә</string>
+
+    <!-- Miwok translation for color green -->
+    <string name="miwok_color_green">chokokki</string>
+
+    <!-- Miwok translation for color brown -->
+    <string name="miwok_color_brown">ṭakaakki</string>
+
+    <!-- Miwok translation for color black -->
+    <string name="miwok_color_black">kululli</string>
+
+    <!-- Miwok translation for color gray -->
+    <string name="miwok_color_gray">ṭopoppi</string>
+
+    <!-- Miwok translation for color white -->
+    <string name="miwok_color_white">kelelli</string>
+
+    <!-- Miwok translation for father -->
+    <string name="miwok_family_father">әpә</string>
+
+    <!-- Miwok translation for mother -->
+    <string name="miwok_family_mother">әṭa</string>
+
+    <!-- Miwok translation for son -->
+    <string name="miwok_family_son">angsi</string>
+
+    <!-- Miwok translation for daughter -->
+    <string name="miwok_family_daughter">tune</string>
+
+    <!-- Miwok translation for older brother -->
+    <string name="miwok_family_older_brother">taachi</string>
+
+    <!-- Miwok translation for younger brother -->
+    <string name="miwok_family_younger_brother">chalitti</string>
+
+    <!-- Miwok translation for older sister -->
+    <string name="miwok_family_older_sister">teṭe</string>
+
+    <!-- Miwok translation for younger sister -->
+    <string name="miwok_family_younger_sister">kolliti</string>
+
+    <!-- Miwok translation for grandmother -->
+    <string name="miwok_family_grandmother">ama</string>
+
+    <!-- Miwok translation for grandfather -->
+    <string name="miwok_family_grandfather">paapa</string>
+
+    <!-- Miwok translation for number one -->
+    <string name="miwok_number_one">lutti</string>
+
+    <!-- Miwok translation for number two -->
+    <string name="miwok_number_two">otiiko</string>
+
+    <!-- Miwok translation for number three -->
+    <string name="miwok_number_three">tolookosu</string>
+
+    <!-- Miwok translation for number four -->
+    <string name="miwok_number_four">oyyisa</string>
+
+    <!-- Miwok translation for number five -->
+    <string name="miwok_number_five">massokka</string>
+
+    <!-- Miwok translation for number six -->
+    <string name="miwok_number_six">temmokka</string>
+
+    <!-- Miwok translation for number seven -->
+    <string name="miwok_number_seven">kenekaku</string>
+
+    <!-- Miwok translation for number eight -->
+    <string name="miwok_number_eight">kawinta</string>
+
+    <!-- Miwok translation for number nine -->
+    <string name="miwok_number_nine">wo\'e</string>
+
+    <!-- Miwok translation for number ten -->
+    <string name="miwok_number_ten">na\'aacha</string>
+
+    <!-- Miwok translation for phrase "Where are you going?" -->
+    <string name="miwok_phrase_where_are_you_going">minto wuksus</string>
+
+    <!-- Miwok translation for phrase "What is your name?" -->
+    <string name="miwok_phrase_what_is_your_name">tinnә oyaase\'nә</string>
+
+    <!-- Miwok translation for phrase "My name is..." -->
+    <string name="miwok_phrase_my_name_is">oyaaset...</string>
+
+    <!-- Miwok translation for phrase "How are you feeling?" -->
+    <string name="miwok_phrase_how_are_you_feeling">michәksәs?</string>
+
+    <!-- Miwok translation for phrase "I'm feeling good." -->
+    <string name="miwok_phrase_im_feeling_good">kuchi achit</string>
+
+    <!-- Miwok translation for phrase "Are you coming?" -->
+    <string name="miwok_phrase_are_you_coming">әәnәs\'aa?</string>
+
+    <!-- Miwok translation for phrase "Yes, I'm coming." -->
+    <string name="miwok_phrase_yes_im_coming">hәә\' әәnәm</string>
+
+    <!-- Miwok translation for phrase "I'm coming." -->
+    <string name="miwok_phrase_im_coming">әәnәm</string>
+
+    <!-- Miwok translation for phrase "Let's go." -->
+    <string name="miwok_phrase_lets_go">yoowutis</string>
+
+    <!-- Miwok translation for phrase "Come here." -->
+    <string name="miwok_phrase_come_here">әnni\'nem</string>
+</resources>
