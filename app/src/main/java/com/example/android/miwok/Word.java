@@ -4,13 +4,15 @@ package com.example.android.miwok;
  * Created by uc on 9/2/16.
  */
 public class Word {
+    private static final int NO_IMAGE_PROVIDED = -1;
     /** Default translation for the word */
     private String mDefaultTranslation;
 
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
     /**
      * Create a new Word object.
      *
@@ -45,5 +47,9 @@ public class Word {
 
     public int getmImageResourceId(){
        return mImageResourceId;
+    }
+
+    public boolean haseImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
