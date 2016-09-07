@@ -21,7 +21,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -31,6 +33,7 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word>  {
 
+    private int mColor;
     /**
      * Create a new {@link WordAdapter} object.
      *
@@ -39,6 +42,11 @@ public class WordAdapter extends ArrayAdapter<Word>  {
      */
     public WordAdapter(Context context, ArrayList<Word> words) {
         super(context, 0, words);
+    }
+
+    public WordAdapter(Context context, ArrayList<Word> words, int color) {
+        super(context, 0, words);
+        this.mColor = color;
     }
 
     @Override
@@ -76,6 +84,8 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             imageView.setVisibility(View.GONE);
 
         }
+        LinearLayout layout = (LinearLayout) listItemView.findViewById(R.id.text_area);
+        layout.setBackgroundResource(mColor);
         // Return the whole list item layout (containing 2 TextViews) and an image so that it can be shown in
         // the ListView.
 
