@@ -5,6 +5,8 @@ package com.example.android.miwok;
  */
 public class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
+    private static final int NO_SOUND_PROVIDED = -1;
+
     /** Default translation for the word */
     private String mDefaultTranslation;
 
@@ -12,6 +14,8 @@ public class Word {
     private String mMiwokTranslation;
 
     private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    private int mSoundResourceId = NO_SOUND_PROVIDED;
 
     /**
      * Create a new Word object.
@@ -30,6 +34,14 @@ public class Word {
         this.mMiwokTranslation = mMiwokTranslation;
         this.mImageResourceId = mImageResourceId;
     }
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId,
+                int mSoundResourceId) {
+        this.mDefaultTranslation = mDefaultTranslation;
+        this.mMiwokTranslation = mMiwokTranslation;
+        this.mImageResourceId = mImageResourceId;
+        this.mSoundResourceId = mSoundResourceId;
+    }
+
 
     /**
      * Get the default translation of the word.
@@ -52,4 +64,8 @@ public class Word {
     public boolean haseImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
+    public boolean hasSound(){
+        return mSoundResourceId != NO_SOUND_PROVIDED;
+    }
+
 }
