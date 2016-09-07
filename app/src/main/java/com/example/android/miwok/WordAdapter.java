@@ -23,7 +23,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -75,7 +74,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
 
-        if(currentWord.haseImage()){
+        if(currentWord.hasImage()){
             imageView.setImageResource(currentWord.getmImageResourceId());
             imageView.setVisibility(View.VISIBLE);
 
