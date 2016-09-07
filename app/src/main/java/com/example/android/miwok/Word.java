@@ -64,6 +64,7 @@ public class Word {
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
+
     public boolean hasSound(){
         return mSoundResourceId != NO_SOUND_PROVIDED;
     }
