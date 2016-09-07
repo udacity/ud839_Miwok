@@ -30,10 +30,10 @@ public class Word {
         this.mMiwokTranslation = miwokTranslation;
     }
 
-    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId) {
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mSoundResourceId) {
         this.mDefaultTranslation = mDefaultTranslation;
         this.mMiwokTranslation = mMiwokTranslation;
-        this.mImageResourceId = mImageResourceId;
+        this.mSoundResourceId = mSoundResourceId;
     }
     public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId,
                 int mSoundResourceId) {
