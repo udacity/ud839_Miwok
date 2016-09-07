@@ -74,4 +74,16 @@ public class Word {
         return mSoundResourceId != NO_SOUND_PROVIDED;
     }
 
+    /**
+     * Returns the string representation of the {@link Word} object.
+     */
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mAudioResourceId=" + mSoundResourceId +
+                ", mImageResourceId=" + mImageResourceId +
+                '}';
+    }
 }
