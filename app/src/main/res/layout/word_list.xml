@@ -5,5 +5,4 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.miwok.NumbersActivity"
-    android:background="@color/category_numbers"/>
+    tools:context="com.example.android.miwok.NumbersActivity"/>
