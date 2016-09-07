@@ -16,7 +16,6 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,6 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word>  {
 
     private int mColor;
-    private MediaPlayer mediaPlayer;
     /**
      * Create a new {@link WordAdapter} object.
      *
@@ -76,7 +74,6 @@ public class WordAdapter extends ArrayAdapter<Word>  {
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
 
-        //If it has an image it will get the ID then show it if not hide the view
         if(currentWord.hasImage()){
             imageView.setImageResource(currentWord.getmImageResourceId());
             imageView.setVisibility(View.VISIBLE);
@@ -86,20 +83,10 @@ public class WordAdapter extends ArrayAdapter<Word>  {
             imageView.setVisibility(View.GONE);
 
         }
-
-        //Finds the id for the background color and set it the the layout
         LinearLayout layout = (LinearLayout) listItemView.findViewById(R.id.text_area);
         layout.setBackgroundResource(mColor);
-
-        if(currentWord.hasSound()){
-            mediaPlayer = MediaPlayer.create(this.getContext(), currentWord.getmSoundResourceId());
-            layout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mediaPlayer.start();
-                }
-            });
-        }
+        // Return the whole list item layout (containing 2 TextViews) and an image so that it can be shown in
+        // the ListView.
 
 
         return listItemView;
