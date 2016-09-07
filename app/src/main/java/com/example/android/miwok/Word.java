@@ -18,6 +18,7 @@ public class Word {
     private int mSoundResourceId = NO_SOUND_PROVIDED;
 
     /**
+
      * Create a new Word object.
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
@@ -59,6 +60,10 @@ public class Word {
 
     public int getmImageResourceId(){
        return mImageResourceId;
+    }
+
+    public int getmSoundResourceId() {
+        return mSoundResourceId;
     }
 
     public boolean hasImage() {
