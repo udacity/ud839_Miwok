@@ -26,6 +26,20 @@ import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
     MediaPlayer mMediaPlayer;
+
+
+    /**
+     * This listener gets triggered when the {@link MediaPlayer} has completed
+     * playing the audio file.
+     */
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            // Now that the sound file has finished playing, release the media player resources.
+            releaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,14 +78,22 @@ public class PhrasesActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Word currentWord = words.get(i);
                     if (currentWord.hasSound()){
+                        releaseMediaPlayer();
                         mMediaPlayer = MediaPlayer.create(PhrasesActivity.this,
                                 currentWord.getmSoundResourceId());
                         mMediaPlayer.start();
+                        mMediaPlayer.setOnCompletionListener(mCompletionListener);
                     }
                 }
             });
         }
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 
     /**
