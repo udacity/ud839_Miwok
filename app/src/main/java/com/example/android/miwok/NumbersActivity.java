@@ -56,6 +56,7 @@ public class NumbersActivity extends AppCompatActivity {
                     } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                         mMediaPlayer.start();
                     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                        mMediaPlayer.stop();
                         releaseMediaPlayer();
                     }
                 }
@@ -149,6 +150,10 @@ public class NumbersActivity extends AppCompatActivity {
             // setting the media player to null is an easy way to tell that the media player
             // is not configured to play an audio file at the moment.
             mMediaPlayer = null;
+
+            // Regardless of whether or not we were granted audio focus, abandon it. This also
+            // unregisters the AudioFocusChangeListener so we don't get anymore callbacks.
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
         }
     }
 
