@@ -75,7 +75,7 @@ public class FamilyFragment extends Fragment {
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // mAdapter knows how to create list items for each item in the list.
-        mAdapter = new WordAdapter(getActivity(), mWords, R.color.category_numbers);
+        mAdapter = new WordAdapter(getActivity(), mWords, R.color.category_family);
         createListView(rootView);
 
 
