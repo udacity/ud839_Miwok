@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/miwokWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="lutti"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/englishWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="one"
+        android:text="TextView" />
+</LinearLayout>
