@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Height of each list item -->
+    <!-- Height of each list list_item -->
     <dimen name="list_item_height">88dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
