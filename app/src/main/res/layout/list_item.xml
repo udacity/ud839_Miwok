@@ -19,8 +19,9 @@
 
         <LinearLayout
             android:id="@+id/word_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="2"
             android:background="#AAA7AA"
             android:orientation="vertical"
             >
@@ -48,7 +49,6 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="one" />
-
         </LinearLayout>
 
     </LinearLayout>
