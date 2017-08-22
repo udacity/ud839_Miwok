@@ -25,14 +25,25 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PhrasesActivity" android:label="@string/category_phrases" />
-        <activity android:name=".NumbersActivity" android:label="@string/category_numbers" />
-        <activity android:name=".FamilyActivity" android:label="@string/category_family" />
-        <activity android:name=".ColorsActivity" android:label="@string/category_colors"></activity>
+        <activity
+            android:name=".PhrasesActivity"
+            android:label="@string/category_phrases"
+            android:parentActivityName="com.example.android.miwok.MainActivity" />
+        <activity
+            android:name=".NumbersActivity"
+            android:label="@string/category_numbers"
+            android:parentActivityName="com.example.android.miwok.MainActivity" />
+        <activity
+            android:name=".FamilyActivity"
+            android:label="@string/category_family"
+            android:parentActivityName="com.example.android.miwok.MainActivity" />
+        <activity
+            android:name=".ColorsActivity"
+            android:label="@string/category_colors"
+            android:parentActivityName="com.example.android.miwok.MainActivity" />
     </application>
 
 </manifest>

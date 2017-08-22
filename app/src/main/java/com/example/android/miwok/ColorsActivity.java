@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.media.MediaPlayer;
 import android.provider.MediaStore;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,9 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        //ActionBar ab = getSupportActionBar();
+        //ab.setDisplayHomeAsUpEnabled(true);
 
         final ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("red", "wetetti", R.drawable.color_red, R.raw.color_red));
