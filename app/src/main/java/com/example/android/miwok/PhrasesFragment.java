@@ -1,17 +1,24 @@
 package com.example.android.miwok;
 
+
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class NumbersActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class PhrasesFragment extends Fragment {
 
     MediaPlayer mMediaPlayer;
     AudioManager mAudioManager;
@@ -49,28 +56,38 @@ public class NumbersActivity extends AppCompatActivity {
         }
     };
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+    public PhrasesFragment() {
+        // Required empty public constructor
+    }
 
-        mAudioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
+    @Override
+    public void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.word_list, container, false);
+
+        mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
-        words.add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-        words.add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-        words.add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-        words.add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
-        words.add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-        words.add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-        words.add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-        words.add(new Word("nine", "wo'e", R.drawable.number_nine, R.raw.number_nine));
-        words.add(new Word("ten", "na'aacha", R.drawable.number_ten, R.raw.number_ten));
+        words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        words.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        words.add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        words.add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        words.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        words.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        words.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        words.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
-        WordAdapter wordAdapter = new WordAdapter(this, words, R.color.category_numbers);
+        WordAdapter wordAdapter = new WordAdapter(getActivity(), words, R.color.category_phrases);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(wordAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -81,36 +98,13 @@ public class NumbersActivity extends AppCompatActivity {
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(i).getSongId());
+                    mMediaPlayer = MediaPlayer.create(getActivity(), words.get(i).getSongId());
                     mMediaPlayer.start();
                 }
             }
         });
 
-
-
-
-       /* LinearLayout rootView =  (LinearLayout)findViewById(R.id.rootView);
-        for (int i=0;i<words.size();i++)
-        {
-            TextView wordView = new TextView(this);
-            wordView.setText(words.get(i));
-            rootView.addView(wordView);
-        }*/
-
-        /*int cont = 0;
-        while (cont<words.size()){
-            TextView wordView = new TextView(this);
-            wordView.setText(words.get(cont));
-            rootView.addView(wordView);
-            cont++;
-        }*/
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        releaseMediaPlayer();
+        return rootView;
     }
 
     private void releaseMediaPlayer() {
@@ -126,4 +120,5 @@ public class NumbersActivity extends AppCompatActivity {
             mMediaPlayer = null;
         }
     }
+
 }
