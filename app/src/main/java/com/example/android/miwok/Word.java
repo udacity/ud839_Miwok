@@ -11,10 +11,12 @@ public class Word {
         mMiwokTranslation = MiwokTranslation;
     }
 
+    //get english or default translation
     public String getDefaultTranslation(){
         return mDefaultTranslation;
     }
 
+    //get miwok translation
     public String getMiwokTranslation(){
         return mMiwokTranslation;
     }
