@@ -46,10 +46,4 @@
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
 
-    <TextView
-        android:id="@+id/food"
-        style="@style/CategoryStyle"
-        android:background="@color/category_food"
-        android:text="Food" />
-
 </LinearLayout>

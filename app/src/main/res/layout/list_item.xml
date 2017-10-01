@@ -2,21 +2,47 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/tan_background"
+    >
 
-    <TextView
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"/>
+
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/category_numbers">
+    <TextView
         android:id="@+id/miwok_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:paddingLeft="16dp"
+        android:textStyle="bold"
         tools:text="lutti"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/default_text_view"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:paddingLeft="16dp"
+        android:textColor="@android:color/white"
         tools:text="one"/>
+
+    </LinearLayout>
 
 </LinearLayout>
