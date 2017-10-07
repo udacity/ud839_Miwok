@@ -27,4 +27,8 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+    <!-- Category name for the vocabulary words for foood items [CHAR LIMIT=20] -->
+    <string name="category_food">Food</string>
+
 </resources>

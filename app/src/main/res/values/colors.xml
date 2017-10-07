@@ -34,4 +34,8 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Background color for the food category -->
+    <color name="category_food">#474C54</color>
+
 </resources>
