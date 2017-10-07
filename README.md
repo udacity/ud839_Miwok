@@ -7,10 +7,10 @@ Used in a Udacity course in the Beginning Android Nanodegree.
 
 ud839_Miwok/app/src/main/res/drawable-xxxhdpi
 
-
+<p>
 <img alt="App image" src="app/src/main/res/drawable-xxxhdpi/miwok.png" width="250">
 <img alt="App image" src="app/src/main/res/drawable-xxxhdpi/numbers.png" width="250">
-<img alt="App image" src="app/src/main/res/drawable-xxxhdpi/family.png" width="250">
+<img alt="App image" src="app/src/main/res/drawable-xxxhdpi/family.png" width="250"></p>
 <img alt="App image" src="app/src/main/res/drawable-xxxhdpi/colours.png" width="250">
 <img alt="App image" src="app/src/main/res/drawable-xxxhdpi/phrases.png" width="250">
 
