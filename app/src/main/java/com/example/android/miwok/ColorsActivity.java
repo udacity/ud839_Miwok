@@ -22,6 +22,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
+    WordAdapter wordActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +52,11 @@ public class ColorsActivity extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+        wordActivity = adapter;
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        wordActivity.releaseMediaPlayer();
     }
 }
