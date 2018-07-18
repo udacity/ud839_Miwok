@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+<item name = "rootView" type = "id" >rootView</item >
+    <item name = "list" type = "id" >list</item >
+</resources >

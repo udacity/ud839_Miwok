@@ -21,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,12 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
-
         // Set a click listener on that View
         numbers.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
+
+
                 // Create a new intent to open the {@link NumbersActivity}
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
 
@@ -95,4 +97,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
