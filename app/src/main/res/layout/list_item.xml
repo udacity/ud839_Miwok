@@ -3,29 +3,42 @@
     android:layout_width = "match_parent"
     android:layout_height = "wrap_content"
     android:orientation="horizontal"
+    android:minHeight="@dimen/list_item_height"
     >
     <ImageView
         android:id="@+id/image"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
+        android:layout_width="@dimen/list_item_height"
+
         android:src="@mipmap/ic_launcher"
+        android:layout_height="@dimen/list_item_height"
         android:padding="20dp"/>
 <LinearLayout
     android:layout_width = "match_parent"
     android:layout_height = "match_parent"
     xmlns:tools = "http://schemas.android.com/tools"
+    android:background="@color/category_numbers"
     android:orientation = "vertical"
     android:padding="16dp">
 
     <TextView
         android:id = "@+id/miwokTextView"
         android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         tools:text = "lutti" />
     <TextView
         android:id = "@+id/defaultTextView"
         android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/white"
         tools:text = "one" />
 </LinearLayout >
 </LinearLayout>

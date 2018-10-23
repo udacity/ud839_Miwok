@@ -11,6 +11,7 @@ public class Word {
     /**
      * image resource id
      */
+
     private int mImageResourceId = NOVISIBLEIMAGES;
     private static final int NOVISIBLEIMAGES = -1;
 
