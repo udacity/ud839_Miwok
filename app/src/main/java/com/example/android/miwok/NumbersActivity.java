@@ -15,6 +15,8 @@
  */
 package com.example.android.miwok;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -29,6 +31,7 @@ import com.example.android.miwok.R;
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,11 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(NumbersActivity.this,"lutti ",Toast.LENGTH_SHORT).show();
+
+                MediaPlayer mediaPlayer;
+                mediaPlayer = MediaPlayer.create(NumbersActivity.this,R.raw.number_one);
+                mediaPlayer.start();
+
             }
         });
     }
