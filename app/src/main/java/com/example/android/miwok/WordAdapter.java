@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.support.v4.content.ContextCompat;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,9 +15,12 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(Activity context, ArrayList<Word> words) {
+    private int mColorResourceId;
+
+    public WordAdapter(Activity context, ArrayList<Word> words,int mColorResourceId) {
 
         super(context,0,words);
+        this.mColorResourceId=mColorResourceId;
     }
 
     @NonNull
@@ -55,6 +59,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
 
+        View textContainer= listItemView.findViewById(R.id.text_container);
+        int color=ContextCompat.getColor(getContext(),mColorResourceId);
+        textContainer.setBackgroundColor(color);
         // Return the whole list item layout (containing 2 TextViews )
         // so that it can be shown in the ListView
         return listItemView;

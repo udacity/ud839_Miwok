@@ -41,7 +41,7 @@ public class ColorsActivity extends AppCompatActivity {
 
 
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,R.color.category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

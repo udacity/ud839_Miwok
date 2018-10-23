@@ -16,7 +16,7 @@
     android:layout_width = "match_parent"
     android:layout_height = "match_parent"
     xmlns:tools = "http://schemas.android.com/tools"
-    android:background="@color/category_numbers"
+    android:id="@+id/text_container"
     android:orientation = "vertical"
     android:padding="16dp">
 
