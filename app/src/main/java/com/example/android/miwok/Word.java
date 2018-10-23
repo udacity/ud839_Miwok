@@ -11,9 +11,16 @@ public class Word {
     /**
      * image resource id
      */
-
+      private int  mAudioResourceId;
     private int mImageResourceId = NOVISIBLEIMAGES;
+
     private static final int NOVISIBLEIMAGES = -1;
+
+
+    /**
+     * audio resource id
+     */
+
 
     /**
      * Constructer for PhrasesActivity
@@ -31,10 +38,11 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation is the word in the Miwok language
      */
-    public Word(String defaultTranslation, String miwokTranslation,int mImageResourceId) {
+    public Word(String defaultTranslation, String miwokTranslation,int mImageResourceId,int mAudioResourceId ) {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
         this.mImageResourceId = mImageResourceId;
+        this.mImageResourceId=mImageResourceId;
     }
 
     /**
@@ -54,8 +62,16 @@ public class Word {
     /**
      * Get image resource Id
      */
-    public int getmImageResourceId() {
+    public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    /**
+     * get audio resource id
+
+     */
+    public int getAudioResourceId(){
+        return mAudioResourceId;
     }
 
     public boolean hasImage(){
