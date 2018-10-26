@@ -24,7 +24,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,6 +31,24 @@ public class PhrasesActivity extends AppCompatActivity {
 
     private  MediaPlayer mediaPlayer;
     private AudioManager audioManager;
+    AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+                public void onAudioFocusChange(int focusChange) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                        // Permanent loss of audio focus
+                        releaseMediaPlayer();
+                    }
+                    else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT||focusChange==AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        // Pause playback
+                        mediaPlayer.pause();
+                        mediaPlayer.seekTo(0);
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                        // Your app has been granted audio focus again
+                        // Raise volume to normal, restart playback if necessary
+                        mediaPlayer.start();
+                    }
+                }
+            };
     @Override
     protected void onStop() {
         super.onStop();
@@ -71,7 +88,7 @@ public class PhrasesActivity extends AppCompatActivity {
                 releaseMediaPlayer();
                 Log.v("PhrasesActivity", "Current word: " + word);
                 // Request audio focus for playback
-                int result = audioManager.requestAudioFocus(afChangeListener,
+                int result = audioManager.requestAudioFocus(onAudioFocusChangeListener,
                         // Use the music stream.
                         AudioManager.STREAM_MUSIC,
                         // Request permanent focus.
