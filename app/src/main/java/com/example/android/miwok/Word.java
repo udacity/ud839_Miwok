@@ -14,6 +14,7 @@ public class Word {
       private int  mAudioResourceId;
     private int mImageResourceId = NOVISIBLEIMAGES;
 
+
     private static final int NOVISIBLEIMAGES = -1;
 
 
@@ -25,9 +26,10 @@ public class Word {
     /**
      * Constructer for PhrasesActivity
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation,int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId=audioResourceId;
 
     }
 
@@ -42,7 +44,16 @@ public class Word {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
         this.mImageResourceId = mImageResourceId;
-        this.mImageResourceId=mImageResourceId;
+        this.mAudioResourceId=mAudioResourceId;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' + ", " +
+                "mMiwokTranslation='" + mMiwokTranslation + '\'' + ", " +
+                "mAudioResourceId=" + mAudioResourceId + ", " +
+                "mImageResourceId=" + mImageResourceId + '}';
     }
 
     /**
@@ -77,4 +88,7 @@ public class Word {
     public boolean hasImage(){
         return mImageResourceId !=NOVISIBLEIMAGES;
     }
+
+
+
 }
