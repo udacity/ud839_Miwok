@@ -124,6 +124,7 @@ public class FamilyActivity extends AppCompatActivity  {
             // setting the media player to null is an easy way to tell that the media player
             // is not configured to play an audio file at the moment.
             mediaPlayer = null;
+            audioManager.abandonAudioFocus(onAudioFocusChangeListener);
         }
     }
 
