@@ -83,7 +83,7 @@ public class PhrasesFragment extends Fragment {
 
                 Word word = words.get(position);
                 releaseMediaPlayer();
-                Log.v("PhrasesActivity", "Current word: " + word);
+
                 // Request audio focus for playback
                 int result = audioManager.requestAudioFocus(onAudioFocusChangeListener,
                         // Use the music stream.
@@ -99,7 +99,7 @@ public class PhrasesFragment extends Fragment {
                     mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
-                            //Toast.makeText(PhrasesActivity.this,"I'm done",Toast.LENGTH_SHORT).show();
+
                             releaseMediaPlayer();
                         }
                     });

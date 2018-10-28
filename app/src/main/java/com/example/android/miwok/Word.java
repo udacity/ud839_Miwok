@@ -27,9 +27,7 @@ public class Word {
      */
 
 
-    /**
-     * Constructer for PhrasesActivity
-     */
+
     public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;

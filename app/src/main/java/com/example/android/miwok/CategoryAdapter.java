@@ -22,9 +22,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */
-public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class CategoryAdapter extends FragmentPagerAdapter {
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public CategoryAdapter(FragmentManager fm) {
         super(fm);
     }
 

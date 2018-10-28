@@ -72,7 +72,7 @@ public class ColorsFragment extends Fragment {
 
                 Word word = words.get(position);
                 releaseMediaPlayer();
-                Log.v("ColorsActivity", "Current word: " + word);
+
                 // Request audio focus for playback
                 int result = audioManager.requestAudioFocus(onAudioFocusChangeListener,
                         // Use the music stream.
