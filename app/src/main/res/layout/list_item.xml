@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
     android:layout_width = "match_parent"
     android:layout_height = "wrap_content"
     android:orientation="horizontal"
-    android:minHeight="@dimen/list_item_height"
+
     >
     <ImageView
         android:id="@+id/image"
@@ -14,11 +14,13 @@
         android:padding="20dp"/>
 <LinearLayout
     android:layout_width = "match_parent"
-    android:layout_height = "match_parent"
+    android:layout_height = "88dp"
     xmlns:tools = "http://schemas.android.com/tools"
     android:id="@+id/text_container"
+    android:layout_toRightOf="@id/image"
     android:orientation = "vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_toEndOf = "@id/image" >
 
     <TextView
         android:id = "@+id/miwokTextView"
@@ -41,4 +43,13 @@
         android:textColor="@android:color/white"
         tools:text = "one" />
 </LinearLayout >
-</LinearLayout>
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/baseline_play_arrow_white_24dp"
+        android:layout_height="24dp"
+       />
+</RelativeLayout>

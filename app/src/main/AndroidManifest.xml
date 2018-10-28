@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,26 +12,56 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.miwok">
+<manifest xmlns:android = "http://schemas.android.com/apk/res/android"
+    package = "com.example.android.miwok" >
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-          <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:allowBackup = "true"
+        android:icon = "@mipmap/ic_launcher"
+        android:label = "@string/app_name"
+        android:supportsRtl = "true"
+        android:theme = "@style/AppTheme" >
+        <activity android:name = ".MainActivity" >
+            <intent-filter >
+                <action android:name = "android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <category android:name = "android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name = ".NumbersActivity"
+            android:label = "@string/category_numbers"
+            android:parentActivityName = ".MainActivity" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name = "android.support.PARENT_ACTIVITY"
+                android:value = ".MainActivity" />
+        </activity >
+        <activity
+            android:name = ".FamilyActivity"
+            android:label = "@string/category_family"
+            android:parentActivityName = ".MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name = "android.support.PARENT_ACTIVITY"
+                android:value = ".MainActivity" />
+        </activity >
+        <activity android:name = ".ColorsActivity"
+            android:label="@string/category_colors"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".NumbersActivity" />
-        <activity android:name=".FamilyActivity" />
-        <activity android:name=".ColorsActivity" />
-        <activity android:name=".PhrasesActivity"></activity>
-        </application>
+        <activity android:name = ".PhrasesActivity" >
+              android:label="@string/category_phrases"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        </application >
 
-</manifest>
+</manifest >
