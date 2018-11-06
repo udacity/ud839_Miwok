@@ -23,7 +23,8 @@
     </style>
 
     <!-- App bar style -->
-    <style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <!-- Before style '@' [ parent="@style/..." ] should be used otherwise gives an error -->
+    <style name="MiwokAppBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <!-- Remove the shadow below the app bar -->
         <item name="elevation">0dp</item>
     </style>
