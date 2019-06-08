@@ -41,6 +41,7 @@ public class ColorsActivity extends AppCompatActivity {
         }
     };
 
+
     /**
      * This listener gets triggered whenever the audio focus changes
      * (i.e., we gain or lose audio focus because of another app or device).
