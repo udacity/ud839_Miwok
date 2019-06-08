@@ -2,6 +2,7 @@
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/numbers_list"
+    android:drawSelectorOnTop="true"
     android:orientation="vertical"
     android:numColumns="1"
     android:layout_width="match_parent"

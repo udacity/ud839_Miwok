@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+        Log.v("Main Activity", "onCreate");
 
         // Find the View that shows the numbers category
         TextView numbers = findViewById(R.id.numbers);
@@ -98,5 +99,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v("Main Activity", "onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v("Main Activity", "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v("Main Activity", "onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.v("Main Activity", "onRestart");
     }
 }
