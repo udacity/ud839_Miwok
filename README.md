@@ -7,8 +7,7 @@ Used in a Udacity course in the Beginning Android Nanodegree.
 Pre-requisites
 --------------
 
-- Android SDK v28
-- Android Support Repository v28.0.0
+- Android SDK v29
 
 Getting Started
 ---------------
