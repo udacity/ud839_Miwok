@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.content.Context;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -70,9 +71,23 @@ public class WordAdapter extends ArrayAdapter<Word> {
             image.setVisibility(View.GONE);
         }
 
+        final MediaPlayer mediaPlayer = MediaPlayer.create(listItemView.getContext(), currentWord.getAudioResourceID());
+
+
         //Set the color of the linearLayout based off what was passed in the constructor
         LinearLayout wordPairLayout = (LinearLayout) listItemView.findViewById(R.id.word_pair_linear_layout);
         wordPairLayout.setBackgroundResource(mBackgroundColorID);
+
+        //Set the color of the Play ImageView based off what was passed in the constructor
+        ImageView playImageView = (ImageView) listItemView.findViewById(R.id.play_image_view);
+        playImageView.setBackgroundResource(mBackgroundColorID);
+
+        playImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.start();
+            }
+        });
 
         //return the whole list item layout(containing 2 TextViews)
         //so that it can be shown in the ListView

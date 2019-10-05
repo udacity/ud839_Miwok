@@ -4,18 +4,18 @@
     android:id="@+id/list_item"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_height="88dp"/>
 
     <LinearLayout
         android:id="@+id/word_pair_linear_layout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="88dp"
+        android:layout_weight="2"
         android:paddingLeft="16dp"
         android:gravity="center_vertical"
         android:orientation="vertical">
@@ -37,6 +37,13 @@
             tools:text="one"/>
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/play_image_view"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:src="@android:drawable/ic_media_play"/>
 
 
 </LinearLayout>
