@@ -4,30 +4,36 @@
     android:id="@+id/list_item"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
         android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
+        android:id="@+id/word_pair_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
             tools:text="lutti"/>
         <TextView
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             tools:text="one"/>
     </LinearLayout>
 

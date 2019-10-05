@@ -43,7 +43,7 @@ public class ColorsActivity extends AppCompatActivity {
 
         /*creating the adapters for the recycleView using the
          * using the predefined simple_list_item_1*/
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_colors);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 
