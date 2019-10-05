@@ -31,14 +31,14 @@ public class ColorsActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<>();
 
 
-        words.add(new Word("red", "wetetti"));
-        words.add(new Word("green", "chokokki"));
-        words.add(new Word("brown", "takaakki"));
-        words.add(new Word("gray", "topoppi"));
-        words.add(new Word("black", "kululli"));
-        words.add(new Word("white", "kelelli"));
-        words.add(new Word("dusty yellow", "topiise"));
-        words.add(new Word("mustard yellow", "chiwitte"));
+        words.add(new Word("red", "wetetti", R.drawable.color_red));
+        words.add(new Word("green", "chokokki", R.drawable.color_green));
+        words.add(new Word("brown", "takaakki", R.drawable.color_brown));
+        words.add(new Word("gray", "topoppi", R.drawable.color_gray));
+        words.add(new Word("black", "kululli", R.drawable.color_black));
+        words.add(new Word("white", "kelelli", R.drawable.color_white));
+        words.add(new Word("dusty yellow", "topiise", R.drawable.color_dusty_yellow));
+        words.add(new Word("mustard yellow", "chiwitte", R.drawable.color_mustard_yellow));
 
 
         /*creating the adapters for the recycleView using the
