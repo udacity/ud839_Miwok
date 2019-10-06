@@ -71,9 +71,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
             image.setVisibility(View.GONE);
         }
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(listItemView.getContext(), currentWord.getAudioResourceID());
-
-
         //Set the color of the linearLayout based off what was passed in the constructor
         LinearLayout wordPairLayout = (LinearLayout) listItemView.findViewById(R.id.word_pair_linear_layout);
         wordPairLayout.setBackgroundResource(mBackgroundColorID);
@@ -82,15 +79,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
         ImageView playImageView = (ImageView) listItemView.findViewById(R.id.play_image_view);
         playImageView.setBackgroundResource(mBackgroundColorID);
 
-        playImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.start();
-            }
-        });
 
         //return the whole list item layout(containing 2 TextViews)
         //so that it can be shown in the ListView
         return listItemView;
     }
+
+
 }
