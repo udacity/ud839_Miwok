@@ -18,9 +18,15 @@ package com.example.android.miwok;
 
 import android.content.Context;
 
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+/**
+ * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
+ * each list item based on a data source which is a list of {@link Word} objects.
+ */
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
@@ -42,7 +48,10 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         super(fm);
         mContext = context;
     }
-
+    
+    /**
+     * Return the {@link Fragment} that should be displayed for the given page number.
+     */
 
     @Override
     public Fragment getItem(int position) {
