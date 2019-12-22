@@ -17,12 +17,36 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
+        setContentView(R.layout.word_list);
+        // Create an ArrayList of Word objects
+        ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("Where are you going?\n ","minto wuksus\n"));
+        words.add(new Word("What is your name?\n","tinnә oyaase'nә\n"));
+        words.add(new Word("My name is...\n ","oyaaset"));
+        words.add(new Word("How are you feeling?\n ","michәksәs"));
+        words.add(new Word("I’m feeling good.\n ","kuchi achit\n"));
+        words.add(new Word("Are you coming?\n ","әәnәs'aa?\n"));
+        words.add(new Word("Yes, I’m coming.\n ","hәә’ әәnәm\n"));
+        words.add(new Word("I’m coming.\n ","әәnәm"));
+        words.add(new Word("Let’s go.\n ","yoowutis"));
+        words.add(new Word("Come here.\n","әnni'nem"));
+
+        // Create an {@link WordAdapter}, whose data source is a list of
+        // {@link WordAdapter}s. The adapter knows how to create list item views for each item
+        // in the list.
+        WordAdapter adapter = new WordAdapter(this,words);
+        // Get a reference to the ListView, and attach the adapter to the listView.
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(adapter);
     }
 }
