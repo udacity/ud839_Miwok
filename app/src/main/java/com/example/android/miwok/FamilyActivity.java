@@ -29,21 +29,21 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
         // Create an ArrayList of Word objects
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("father ","әpә"));
-        words.add(new Word("mother","әṭa"));
-        words.add(new Word("son ","angsi"));
-        words.add(new Word("daughter ","tune"));
-        words.add(new Word("older brother\n ","taachi"));
-        words.add(new Word("younger brother\n ","chalitti"));
-        words.add(new Word("older sister\n ","teṭe"));
-        words.add(new Word("younger sister\n ","kolliti"));
-        words.add(new Word("grandmother\n ","ama"));
-        words.add(new Word("grandfather ","paapa"));
+        words.add(new Word("father ", "әpә", R.drawable.family_father));
+        words.add(new Word("mother", "әṭa", R.drawable.family_mother));
+        words.add(new Word("son ", "angsi", R.drawable.family_son));
+        words.add(new Word("daughter ", "tune", R.drawable.family_daughter));
+        words.add(new Word("older brother\n ", "taachi", R.drawable.family_older_brother));
+        words.add(new Word("younger brother\n ", "chalitti", R.drawable.family_younger_brother));
+        words.add(new Word("older sister\n ", "teṭe", R.drawable.family_older_sister));
+        words.add(new Word("younger sister\n ", "kolliti", R.drawable.family_younger_sister));
+        words.add(new Word("grandmother\n ", "ama", R.drawable.family_grandmother));
+        words.add(new Word("grandfather ", "paapa", R.drawable.family_grandfather));
 
         // Create an {@link WordAdapter}, whose data source is a list of
         // {@link WordAdapter}s. The adapter knows how to create list item views for each item
         // in the list.
-        WordAdapter adapter = new WordAdapter(this,words);
+        WordAdapter adapter = new WordAdapter(this, words,R.color.category_family);
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) findViewById(R.id.list);
 
