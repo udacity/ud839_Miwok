@@ -8,18 +8,20 @@ public class Word {
     // Drawable resource ID
     private int mImageResourceId=NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
+    //variable for audio
+    private int mAudioResourceId;
 
-    public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId) {
+    public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId,int audioResourceId) {
         mDefaultTranslation = DefaultTranslation;
         mMiwokTranslation = MiwokTranslation;
         mImageResourceId = imageResourceId;
-
+        mAudioResourceId=audioResourceId;
     }
 
-    public Word(String DefaultTranslation, String MiwokTranslation) {
+    public Word(String DefaultTranslation, String MiwokTranslation,int audioResourceId) {
         mDefaultTranslation = DefaultTranslation;
         mMiwokTranslation = MiwokTranslation;
-
+        mAudioResourceId=audioResourceId;
     }
 
     /**
@@ -50,6 +52,10 @@ public class Word {
         return mImageResourceId!=NO_IMAGE_PROVIDED;
     }
 
+    /**
+     *
+     */
+    public int getAudioResourceId(){return mAudioResourceId;}
 
 
 }
