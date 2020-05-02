@@ -40,32 +40,19 @@ public class ColorsActivity extends AppCompatActivity {
     private AudioManager mAudioManager;
 
     private AudioFocusRequestCompat mAudioFocusRequest;
-
-    /**
-     * This listener gets triggered when the {@link MediaPlayer} has completed
-     * playing the audio file.
-     */
-    /*private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mediaPlayer) {
-            // Now that the sound file has finished playing, release the media player resources.
-            releaseMediaPlayer();
-        }
-    };*/
-
     private MediaPlayer.OnCompletionListener mOnCompletionListener;
 
-    /**
-     * This listener gets triggered whenever the audio focus changes
-     * (i.e., we gain or lose audio focus because of another app or device).
-     */
-
+    private ArrayList<Word> words;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+        /*
+          This listener gets triggered when the {@link MediaPlayer} has completed
+          playing the audio file.
+         */
         mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -73,6 +60,10 @@ public class ColorsActivity extends AppCompatActivity {
             }
         };
 
+        /*
+         * This listener gets triggered whenever the audio focus changes
+         * (i.e., we gain or lose audio focus because of another app or device).
+         */
          AudioManager.OnAudioFocusChangeListener audioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
             @Override
             public void onAudioFocusChange(int focusChange) {
@@ -113,7 +104,7 @@ public class ColorsActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
+        words = new ArrayList<Word>();
         words.add(new Word(R.string.color_red, R.string.miwok_color_red,
                 R.drawable.color_red, R.raw.color_red));
         words.add(new Word(R.string.color_mustard_yellow, R.string.miwok_color_mustard_yellow,
