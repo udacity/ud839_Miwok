@@ -15,6 +15,7 @@
  */
 package com.example.android.miwok;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -44,7 +45,6 @@ public class aKatakanaActivity extends AppCompatActivity {
         WordAdaptor adapter = new WordAdaptor(this, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
-
         listView.setAdapter(adapter);
     }
 }
