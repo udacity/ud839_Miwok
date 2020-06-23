@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, uKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(numbersIntent);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                Intent familyIntent = new Intent(MainActivity.this, iKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(familyIntent);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link ColorsActivity}
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                Intent colorsIntent = new Intent(MainActivity.this, aKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(colorsIntent);
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link PhrasesActivity}
-                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                Intent phrasesIntent = new Intent(MainActivity.this, eKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(phrasesIntent);

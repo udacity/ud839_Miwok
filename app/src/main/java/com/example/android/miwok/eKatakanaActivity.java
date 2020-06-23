@@ -21,7 +21,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class NumbersActivity extends AppCompatActivity {
+public class eKatakanaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +29,15 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("u", "ウ"));
-        words.add(new Word("ku", "ク"));
-        words.add(new Word("su", "ス"));
-        words.add(new Word("tsu", "ツ"));
-        words.add(new Word("nu", "ヌ"));
-        words.add(new Word("fu", "フ"));
-        words.add(new Word("mu", "ム"));
-        words.add(new Word("yu", "ユ"));
-        words.add(new Word("ru", "ル"));
-
+        words.add(new Word("e", "エ"));
+        words.add(new Word("ke", "ケ"));
+        words.add(new Word("se", "セ"));
+        words.add(new Word("te", "テ"));
+        words.add(new Word("ne", "ネ"));
+        words.add(new Word("he", "ヘ"));
+        words.add(new Word("me", "メ"));
+        words.add(new Word("re", "レ"));
+        words.add(new Word("we", "ヱ"));
 
 
         WordAdaptor adapter = new WordAdaptor(this, words);

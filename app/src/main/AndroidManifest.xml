@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NumbersActivity"
+            android:name=".uKatakanaActivity"
             android:label="@string/category_numbers"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -39,7 +39,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".FamilyActivity"
+            android:name=".iKatakanaActivity"
             android:label="@string/category_family"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -48,7 +48,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".ColorsActivity"
+            android:name=".aKatakanaActivity"
             android:label="@string/category_colors"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -57,7 +57,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".PhrasesActivity"
+            android:name=".eKatakanaActivity"
             android:label="@string/category_phrases"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
