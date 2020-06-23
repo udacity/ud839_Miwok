@@ -2,16 +2,16 @@ package com.example.android.miwok;
 
 public class Word {
     //custom constructor take in 2 strings, english and miwak
-    public Word(String english, String miwak)
+    public Word(String english, String japanese)
     {
-        MiwakWord= miwak;
+        JapaneseWord= japanese;
         EnglishWord = english;
     }
-    String MiwakWord;
+    String JapaneseWord;
     String EnglishWord;
 
     public String getJapaneseWord() {
-        return MiwakWord;
+        return JapaneseWord;
     }
 
     public String getEnglishWord() {

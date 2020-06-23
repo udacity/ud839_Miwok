@@ -34,4 +34,7 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Background color for the okana category -->
+    <color name="category_okana">#6D4C41</color>
 </resources>

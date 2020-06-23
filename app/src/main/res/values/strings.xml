@@ -14,17 +14,18 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Miwok</string>
+    <string name="app_name">Learn Japanese</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <string name="category_phrases">"E" Katakana</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
+    <string name="category_colors">"A" Katakana</string>
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_numbers">Numbers</string>
+    <string name="category_numbers">"U" Katakana</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <string name="category_family">"I" Katakana</string>
+    <string name="okatakana_string">"O" Katakana</string>
 </resources>

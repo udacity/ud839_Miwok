@@ -45,5 +45,10 @@
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
+    <TextView
+        android:id="@+id/okana"
+        style="@style/CategoryStyle"
+        android:background="@color/category_okana"
+        android:text="@string/okatakana_string" />
 
 </LinearLayout>

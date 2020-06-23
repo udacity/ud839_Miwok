@@ -17,12 +17,34 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ColorsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.word_list);
+
+        ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("a", "ア"));
+        words.add(new Word("ka", "カ"));
+        words.add(new Word("sa", "サ"));
+        words.add(new Word("ta", "タ"));
+        words.add(new Word("na", "ナ"));
+        words.add(new Word("ha", "ハ"));
+        words.add(new Word("ma", "マ"));
+        words.add(new Word("ya", "ヤ"));
+        words.add(new Word("ra", "ラ"));
+        words.add(new Word("wa", "ワ"));
+
+
+        WordAdaptor adapter = new WordAdaptor(this, words);
+
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(adapter);
     }
 }
