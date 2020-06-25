@@ -20,17 +20,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    CheckBox showEnglishBox;
+    TextView engView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        showEnglishBox = (CheckBox)findViewById(R.id.knownKana);
+        engView = (TextView)findViewById(R.id.englishWordsView);
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(familyIntent);
+
             }
         });
 
@@ -110,5 +115,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(okanaIntent);
             }
         });
+    }
+    public void checkbox_clicked(View v)
+    {
+
+        if(showEnglishBox.isChecked())
+        {
+            engView.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            engView.setVisibility(View.VISIBLE);
+        }
+
     }
 }

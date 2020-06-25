@@ -41,7 +41,7 @@ public class eKatakanaActivity extends AppCompatActivity {
         words.add(new Word("we", "ヱ"));
 
 
-        WordAdaptor adapter = new WordAdaptor(this, words);
+        WordAdaptor adapter = new WordAdaptor(this, words,R.color.category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

@@ -27,10 +27,10 @@
     <color name="category_numbers">#FD8E09</color>
 
     <!-- Background color for the family members category -->
-    <color name="category_family">#379237</color>
+    <color name="category_family">#E0E0E0</color>
 
     <!-- Background color for the colors category -->
-    <color name="category_colors">#8800A0</color>
+    <color name="category_colors">#E0E0E0</color>
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>

@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
-        android:background="@color/category_colors"
+        android:background="#F44336"
         android:text="@string/category_colors" />
 
     <TextView
@@ -43,7 +43,7 @@
     <TextView
         android:id="@+id/family"
         style="@style/CategoryStyle"
-        android:background="@color/category_family"
+        android:background="#69F0AE"
         android:text="@string/category_family" />
 
     <TextView

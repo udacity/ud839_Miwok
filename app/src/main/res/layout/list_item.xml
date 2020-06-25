@@ -8,18 +8,24 @@
     android:padding="16dp">
 
     <ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/kanaImg"
-    ></ImageView>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:src="@drawable/drawable_gif"/>
+
+
+        <TextView
+            android:paddingLeft="5dp"
+            android:textSize="34dp"
+            android:layout_weight="1"
+            android:id="@+id/japaneseWordsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     <TextView
-    android:id="@+id/englishWordsView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
-    <TextView
-        android:textSize="34dp"
-        android:layout_weight="1"
-        android:id="@+id/japaneseWordsView"
+        android:paddingLeft="16dp"
+        android:textSize="20dp"
+        android:id="@+id/englishWordsView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <CheckBox

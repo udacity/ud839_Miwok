@@ -40,7 +40,7 @@ public class iKatakanaActivity extends AppCompatActivity {
         words.add(new Word("wi", "ヰ"));
 
 
-        WordAdaptor adapter = new WordAdaptor(this, words);
+        WordAdaptor adapter = new WordAdaptor(this, words,R.color.category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
