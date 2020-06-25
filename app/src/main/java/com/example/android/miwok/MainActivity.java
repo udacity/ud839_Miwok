@@ -20,17 +20,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
+    CheckBox showEnglishBox;
+    TextView engView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        showEnglishBox = (CheckBox)findViewById(R.id.knownKana);
+        engView = (TextView)findViewById(R.id.englishWordsView);
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, uKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(numbersIntent);
@@ -56,10 +60,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                Intent familyIntent = new Intent(MainActivity.this, iKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(familyIntent);
+
             }
         });
 
@@ -72,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link ColorsActivity}
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                Intent colorsIntent = new Intent(MainActivity.this, aKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(colorsIntent);
@@ -88,11 +93,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link PhrasesActivity}
-                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                Intent phrasesIntent = new Intent(MainActivity.this, eKatakanaActivity.class);
 
                 // Start the new activity
                 startActivity(phrasesIntent);
             }
         });
+
+        // Find the View that shows the phrases category
+        final TextView okanaView = (TextView) findViewById(R.id.okana);
+
+        // Set a click listener on that View
+        okanaView.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the phrases category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link PhrasesActivity}
+                Intent okanaIntent = new Intent(MainActivity.this, oKatakanaActivity.class);
+
+                // Start the new activity
+                startActivity(okanaIntent);
+            }
+        });
+    }
+    public void checkbox_clicked(View v)
+    {
+
+        if(showEnglishBox.isChecked())
+        {
+            engView.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            engView.setVisibility(View.VISIBLE);
+        }
+
     }
 }

@@ -17,6 +17,15 @@ Getting Started
 This sample uses the Gradle build system. To build this project, use the
 "gradlew build" command or use "Import Project" in Android Studio.
 
+//Many users have had issues opening the project, opening the project from source control is highly recommended, as it saves alot of time and frustration
+
+Fork this repository to your GitHub account.
+Open Android Studio.
+File -> New -> Project from version control - GitHub
+Paste a link from your repository of the forked Miwok app, push Clone.
+Agree the presented terms. Update everything that's asked
+Launch on the device
+
 Support
 -------
 
