@@ -42,7 +42,7 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
-        //Create an array of words
+        //Verify the content of ArrayList by printing out each Array
         Log.v("MainActivity","Word at index 0: " + words.get(0));
         Log.v("MainActivity","Word at index 0: " + words.get(1));
         Log.v("MainActivity","Word at index 0: " + words.get(2));
