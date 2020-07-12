@@ -45,41 +45,70 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("ten");
 
         LinearLayout rootView =(LinearLayout)findViewById(R.id.rootView);
+
+        int index = 0;
+
         TextView wordView = new TextView(this);
         wordView.setText(words.get(0));
         rootView.addView(wordView);
+
+        index =index + 1;
 
         TextView wordView2 = new TextView(this);
         wordView2.setText(words.get(1));
         rootView.addView(wordView2);
 
+        index =index + 1;
+
+
         TextView wordView3 = new TextView(this);
         wordView3.setText(words.get(2));
         rootView.addView(wordView3);
+
+        index =index + 1;
+
 
         TextView wordView4 = new TextView(this);
         wordView4.setText(words.get(3));
         rootView.addView(wordView4);
 
+        index =index + 1;
+
+
         TextView wordView5 = new TextView(this);
         wordView5.setText(words.get(4));
         rootView.addView(wordView5);
+
+        index =index + 1;
+
 
         TextView wordView6 = new TextView(this);
         wordView6.setText(words.get(5));
         rootView.addView(wordView6);
 
+        index =index + 1;
+
+
         TextView wordView7 = new TextView(this);
         wordView7.setText(words.get(6));
         rootView.addView(wordView7);
+
+        index =index + 1;
+
 
         TextView wordView8 = new TextView(this);
         wordView8.setText(words.get(7));
         rootView.addView(wordView8);
 
+        index =index + 1;
+
+
         TextView wordView9 = new TextView(this);
         wordView9.setText(words.get(8));
         rootView.addView(wordView9);
+
+        index =index + 1;
+
 
         TextView wordView10 = new TextView(this);
         wordView10.setText(words.get(9));
