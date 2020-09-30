@@ -2,6 +2,7 @@ Miwok App
 ===================================
 
 This app displays lists of vocabulary words for the user to learn the Miwok language.
+Miwok language is a tribal Language Which is at the verge of extinct. As A developer we Can Come up with Solution So that others can Learn This Language.
 Used in a Udacity course in the Beginning Android Nanodegree.
 
 Pre-requisites
