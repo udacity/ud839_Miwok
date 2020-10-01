@@ -34,4 +34,7 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Background color for the tarun activity -->
+    <color name="category_tarun">#FF9E80</color>
 </resources>

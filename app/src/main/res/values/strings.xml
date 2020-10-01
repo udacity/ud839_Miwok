@@ -27,4 +27,7 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+    <!-- Category name for the vocabulary words for tarun friends [CHAR LIMIT=20] -->
+    <string name="category_tarun">Tarun Friends</string>
 </resources>
