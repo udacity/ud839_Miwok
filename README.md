@@ -4,6 +4,15 @@ Miwok App
 This app displays lists of vocabulary words for the user to learn the Miwok language.
 Used in a Udacity course in the Beginning Android Nanodegree.
 
+How to use this repository
+--------------
+- Fork this repository to your Github account.
+- Open Android Studio 3.2.x+ in your local machine.
+- We recommend you to use the [Version Control System](https://developer.android.com/studio/intro#version_control_basics)(VCS) in your Android Studio 3.2.x+ IDE to clone the repository directly in your IDE.
+- You may have to use the File > Settings > Version Control (VCS) menu option to set up Git settings.
+- Refer to this [IntelliJ document](https://www.jetbrains.com/help/idea/version-control-integration.html) for details.
+- Working with VCS will make it easy for you to push your updates to your remote repository in Github.
+
 Pre-requisites
 --------------
 
