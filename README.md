@@ -11,7 +11,7 @@ How to use this repository
 - We recommend you to use the [Version Control System](https://developer.android.com/studio/intro#version_control_basics)(VCS) in your Android Studio 3.2.x+ IDE to clone the repository directly in your IDE.
 - You may have to use the File > Settings > Version Control (VCS) menu option to set up Git settings.
 - Refer to this [IntelliJ document](https://www.jetbrains.com/help/idea/version-control-integration.html) for details.
-- Working with VCS will make it easy for you to push your updates to your remote repository in Github.
+- Working with VCS will make it easy for you to push your updates or switch between branches to your remote repository in Github.
 
 Pre-requisites
 --------------
