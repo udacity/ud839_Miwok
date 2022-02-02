@@ -13,7 +13,7 @@ How to use this repository
 - Refer to this [IntelliJ document](https://www.jetbrains.com/help/idea/version-control-integration.html) for details.
 - Working with VCS will make it easy for you to push your updates or switch between branches to your remote repository in Github.
 
-Pre-requisites
+Prerequisites
 --------------
 
 - Android Studio 3.2.1 or higher
