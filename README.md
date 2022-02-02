@@ -4,12 +4,39 @@ Miwok App
 This app displays lists of vocabulary words for the user to learn the Miwok language.
 Used in a Udacity course in the Beginning Android Nanodegree.
 
-Pre-requisites
+How to use this repository
+--------------
+- Fork this repository to your Github account.
+- Open Android Studio 3.2.x+ in your local machine.
+- We recommend you to use the [Version Control System](https://developer.android.com/studio/intro#version_control_basics)(VCS) in your Android Studio 3.2.x+ IDE to clone the repository directly in your IDE.
+- You may have to use the File > Settings > Version Control (VCS) menu option to set up Git settings.
+- Refer to this [IntelliJ document](https://www.jetbrains.com/help/idea/version-control-integration.html) for details.
+- Working with VCS will make it easy for you to push your updates to your remote repository in Github or switch between branches.
+
+Prerequisites
 --------------
 
-- Android SDK v23
-- Android Build Tools v23.0.2
-- Android Support Repository v23.3.0
+- Android Studio 3.2.1 or higher
+- compileSdkVersion 32 (For AndroidX dependencies, the min compileSdkVersion version is 31)
+- minSdkVersion 21
+- Supports up to Android 12
+- Gradle 7.2.0
+
+To run app in an Android Virtual Device (AVD), we have used the following configuration:
+- Pixel 4 Mobile device with x86 System image
+- API level 30
+- Android 11
+
+Note - Gradle Updates
+---------------
+
+The Android Studio build system depends on Gradle and its plugins. The Gradle and its plugins have to be updated separately of Android Studio.
+For the updated version, refer to the following updated files:
+~/build.gradle (project) file
+~/app/build.graddle(: app) file
+~/gradle/wrapper/gradle-wrapper.properties file
+You can refer anytime to the latest [Android Gradle plugin release notes](https://developer.android.com/studio/releases/gradle-plugin) for the newest version of plugins.
+
 
 Getting Started
 ---------------
