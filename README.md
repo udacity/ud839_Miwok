@@ -5,6 +5,7 @@ This app displays lists of vocabulary words for the user to learn the Miwok lang
 Used in a Udacity course in the Beginning Android Nanodegree.
 
 The video below shows how the app would look like after the end of Lesson two:
+
 https://user-images.githubusercontent.com/48475411/152291996-98a0a948-97d8-4b71-96a7-d4af5163293e.mov
 
 
