@@ -23,7 +23,7 @@
     </style>
 
     <!-- App bar style -->
-    <style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="MiwokAppBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <!-- Remove the shadow below the app bar -->
         <item name="elevation">0dp</item>
     </style>

@@ -119,7 +119,7 @@
     <string name="phrase_what_is_your_name">What is your name?</string>
 
     <!-- Vocabulary phrase for "My name is..." [CHAR LIMIT=20] -->
-    <string name="phrase_my_name_is">My name is...</string>
+    <string name="phrase_my_name_is">My name is </string>
 
     <!-- Vocabulary phrase for "How are you feeling?" [CHAR LIMIT=20] -->
     <string name="phrase_how_are_you_feeling">How are you feeling?</string>

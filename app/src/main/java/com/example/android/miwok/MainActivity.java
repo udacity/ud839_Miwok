@@ -16,14 +16,27 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.os.StrictMode;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
+// import android.support.design.widget.TabLayout;
+// import android.support.v4.view.ViewPager;
+// import android.support.v7.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // StrictMode is a developer tool which detects things you might be doing by accident and brings them to your attention so you can fix them.
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                .detectLeakedClosableObjects()
+                .penaltyLog()
+                .build());
+        StrictMode.enableDefaults();
+
         super.onCreate(savedInstanceState);
 
         // Set the content of the activity to use the activity_main.xml layout file
