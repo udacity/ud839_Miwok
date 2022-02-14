@@ -42,6 +42,13 @@ You can refer anytime to the latest [Android Gradle plugin release notes](https:
 This sample uses the Gradle build system. To build this project, use the
 "gradlew build" command or use "Import Project" in Android Studio.
 
+Troubleshoot
+---------------
+- Gradle version and Android Gradle Plugin version should be compatible. See the table [here](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)
+- Sometimes, if you face unexpected behavior, go to File > Invalidate Caches/Restart. 
+- Android Studio - [How to Change Android SDK Path?](https://stackoverflow.com/questions/16581752/android-studio-how-to-change-android-sdk-path/18409923#18409923)  
+- In case you face some unexpected errors with the Emulator, it will be beneficial to wipe out the AVD data by going to Tools >> Device Manager >> Select Device >> Wipe out option.
+
 
 License
 -------
